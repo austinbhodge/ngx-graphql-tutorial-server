@@ -1,0 +1,63 @@
+{
+  "name": "ngx-graphql-tutorial-server",
+  "version": "1.0.0",
+  "description": "Learn how to make isomorphic apps with angular and graphql",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "webpack",
+    "build:watch": "webpack --watch",
+    "pretest": "npm run build",
+    "test": "jest",
+    "test:watch": "npm test -- --watch",
+    "test:notify": "npm run test:watch -- --notify",
+    "coverage": "npm test -- --coverage",
+    "coverage:notify": "npm run coverage -- --watch --notify",
+    "start": "npm run build && node dist/main.js",
+    "start:watch": "concurrently \"npm run build:watch\" \"node-dev dist/main.js\"",
+    "preupver": "npm test",
+    "upver": "standard-version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/austinbhodge/ngx-graphql-tutorial-server.git"
+  },
+  "author": "Austin Hodge",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/austinbhodge/ngx-graphql-tutorial-server/issues"
+  },
+  "homepage": "https://github.com/austinbhodge/ngx-graphql-tutorial-server#readme",
+  "keywords": [
+    "apollo",
+    "backend",
+    "apollo-server",
+    "typescript",
+    "webpack",
+    "graphql",
+    "graphiql",
+    "express"
+  ],
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "core-js": "^2.4.1",
+    "cors": "^2.8.3",
+    "express": "^4.15.2",
+    "graphql": "0.10.1",
+    "graphql-server-express": "^0.8.0",
+    "graphql-tools": "1.0.0",
+    "mongodb": "^2.2.27"
+  },
+  "devDependencies": {
+    "@types/graphql": "^0.9.1",
+    "@types/mongodb": "^2.2.2",
+    "@types/node": "^7.0.18",
+    "ts-node": "~3.0.6",
+    "tslint": "~5.4.3",
+    "typescript": "~2.3.4",
+    "awesome-typescript-loader": "^3.1.3",
+    "concurrently": "^3.4.0",
+    "node-dev": "^3.1.3",
+    "webpack": "^2.5.1",
+    "webpack-node-externals": "^1.6.0"
+  }
+}
